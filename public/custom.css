@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body::-webkit-scrollbar{
+  display: none;
+ 
+}
+body::-webkit-scrollbar-track{
+box-shadow: inset 0 0 5px grey;
+border-radius: 10px;
+}
+
+@keyframes slideY{
+    0%{
+       
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px);
+    }
+    100%{
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        
+    };}
+    @keyframes Yslide{
+    0%{
+       
+        -webkit-transform: translateY(00px);
+        transform: translateY(00px);
+    }
+    100%{
+        -webkit-transform: translateY(-300px);
+        transform: translateY(-300px);    };}@keyframes Xslide{
+    0%{
+       
+        -webkit-transform: translateX(00px);
+        transform: translateX(00px);
+    }
+    100%{
+        -webkit-transform: translateX(-300px);
+        transform: translateX(-300px);    };}
+@keyframes slideX{
+    0%{
+       
+        -webkit-transform: translateX(-200px);
+        transform: translateX(-200px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+        
+    };
+
+}
+@keyframes spinn{
+    /* from{transform:rotate(0deg)} */
+    to{transform: rotate(90deg)}
+}
+.sX{
+animation: slideX 0.5s linear ;
+}
+.sY{
+animation: slideY 0.5s linear ;
+
+}
+.yS{
+animation: Yslide 0.7s linear ; 
+animation-fill-mode: forward;
+
+}.xS{
+animation: Xslide 0.7s linear ; 
+animation-fill-mode: forward;
+
+}
+.spin90{ 
+   
+    animation: spinn 0.5s ; animation-fill-mode: forwards; 
+}
+.scrollBar::-webkit-scrollbar{
+width: 20px;
+}
+.scrollBar::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+    }
+
+
+@keyframes signupMove{
+    0%{
+        -webkit-transform: translateX(0px) ;
+        transform: translateX(0px) ;
+    }
+    100% {
+        -webkit-transform: translateX(1000px) ;
+        transform: translateX(1000px) ;
+    }
+}
+
+.signUpMover{
+    animation: signupMove 0.5s alternate-reverse ;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+.animationFillModeForwards{
+animation-fill-mode: forwards;
+-webkit-animation-fill-mode: forwards;
+}
